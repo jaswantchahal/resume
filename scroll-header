@@ -1,0 +1,97 @@
+
+	<header class="header">
+  <ul>
+    <li>home</li>
+    <li>contect</li>
+    <li>about</li>
+  </ul>
+
+
+  <div class="right">
+	<div class="button"><a href="">login</a></div>
+  </div>
+</header>
+<div class="wrapper">
+	test
+  </div>
+
+
+
+
+
+css starts
+* {
+	margin: 0;
+	padding: 0;
+	font-family: 'Poppins', sans-serif;
+}
+
+body {
+  
+}
+.header {
+ 
+  background-color: rgba(0,0,0,0.5);
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  transition: all 0.5s;
+}  
+.header-alt ul{
+	display:flex;
+	padding:12px;
+	list-style:none;
+  }
+  
+  .header-alt ul li{
+	margin-right:20px;
+	color:red;
+  }
+
+
+.header-alt {
+
+  background-color: rgba(0,0,0, 0.8);
+  position: fixed;
+
+  width: 100%;
+  transition: all 0.5s;
+}
+.header-alt .right {
+
+display: none;
+}
+.header ul{
+	display:flex;
+	padding:12px;
+	list-style:none;
+  }
+.header ul li{
+	padding: 12px;
+	margin-right: 12px;
+}
+
+.wrapper {  
+  height: 2000px;
+  padding-top: 200px;
+}
+
+
+
+
+
+javascript  starts
+$(function() {
+    var header = $(".header");
+    $(window).scroll(function() {    
+        var scroll = $(window).scrollTop();
+    
+        if (scroll >= 100) {
+            header.removeClass('header').addClass("header-alt");
+        } else {
+            header.removeClass("header-alt").addClass('header');
+        }
+    });
+});
