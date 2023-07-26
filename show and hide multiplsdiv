@@ -1,0 +1,21 @@
+<a  id="showall">All</a>
+<a  class="showSingle" target="1">Div 1</a>
+<a  class="showSingle" target="2">Div 2</a>
+
+
+<div id="sec1" class="targetDiv">Lorum Ipsum1</div>
+<div id="sec2" class="targetDiv">Lorum Ipsum2</div>
+
+html   ends
+
+
+jquery   starts
+$(function(){
+         $('#showall').click(function(){
+               $('.targetDiv').show();
+        });
+        $('.showSingle').click(function(){
+              $('.targetDiv').hide();
+              $('#div'+$(this).attr('target')).show();
+        });
+});
