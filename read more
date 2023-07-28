@@ -1,0 +1,59 @@
+ html  starts  here----
+<div class="card";>
+<p class="cuttoff-text"</p>
+<input class="expand-btn" type="checkbox">
+
+</div>
+
+
+ html  starts  ends----
+
+
+
+
+
+
+
+css starts here_____
+.card {
+  .cuttoff-text {
+    --max-lines: 3;
+    --line-height: 1.4;
+    max-height: calc(var(--max-lines) * 1rem * var(--line-height));
+    overflow: hidden;
+    line-height: var(--line-height);
+    position: relative;
+  }
+  .cuttoff-text:has(+ .expand-btn:not(:checked)):before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    height: calc(1rem * var(--line-height));
+    background: linear-gradient(to bottom, transparent, white);
+  }
+   .cuttoff-text:has(+ .expand-btn:checked){
+    max-height: none;
+   }
+  .expand-btn {
+    width: 110px;
+    appearance: none;
+    margin-top: 8px;
+    padding: 8px;
+    border: 1px solid #000;
+    cursor: pointer;
+    border-radius: 5px;
+    
+  }
+  .expand-btn:hover {
+    background-color: red;
+  }
+  .expand-btn::before {
+  content: "Read More";
+  }
+  .expand-btn:checked:before {
+  content: "Read Less";
+  }
+ 
+}
+csss__ends here
