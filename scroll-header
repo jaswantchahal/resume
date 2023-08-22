@@ -95,3 +95,20 @@ $(function() {
         }
     });
 });
+
+ show after scoll  
+$(document).ready(function () {
+  $(window).on("scroll", function () {
+    // Show & Hide Text On-Scroll
+    if ($(window).scrollTop() > 200) {
+      $(".heading").fadeIn(1000);
+    } else {
+      $(".heading").fadeOut(1000);
+    }
+  });
+});
+
+
+
+
+
