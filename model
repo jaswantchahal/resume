@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modal Example with Overlay</title>
+    <style>
+        /* Overlay styles */
+        .overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+            z-index: 1;
+        }.modal-area {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+  .modal-content {
+    max-width: 1140px;
+    width: 100%;
+    background: #fff;
+}
+        /* Modal styles */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #fff;
+            padding: 20px;
+            width: 80%;
+            max-width: 400px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            z-index: 2;
+        }
+        /* Button styles */
+        #showModalBtn {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <!-- Button to show the modal -->
+    <button id="showModalBtn">Show Modal</button>
+
+    <!-- The Overlay -->
+    <div class="overlay" id="overlay"></div>
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+       <div class="modal-area">
+    
+        <div class="modal-content">
+            <h2>Modal Content</h2>
+            <p>This is a simple modal example.</p>
+            <button id="closeModalBtn">Close Modal</button>
+        </div>
+       </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            var modal = $("#myModal");
+            var overlay = $("#overlay");
+            var showModalBtn = $("#showModalBtn");
+            var closeModalBtn = $("#closeModalBtn");
+
+            // Function to show the modal and overlay
+            showModalBtn.click(function () {
+                modal.show();
+                overlay.show();
+            });
+
+            // Function to close the modal and overlay
+            closeModalBtn.click(function () {
+                modal.hide();
+                overlay.hide();
+            });
+
+            // Function to close the modal and overlay when clicking anywhere outside of them
+            $(document).on("click", function (event) {
+                if ($(event.target).is(overlay)) {
+                    modal.hide();
+                    overlay.hide();
+                }
+            });
+        });
+    </script>
+</body>
+</html>
