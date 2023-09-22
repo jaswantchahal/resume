@@ -103,3 +103,83 @@
     </script>
 </body>
 </html>
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    /* CSS styles for the modal */
+    .modal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.7);
+      z-index: 1;
+    }
+
+    .modal-content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: white;
+      padding: 20px;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Button to open the modal -->
+<button onclick="openModal()">Open Video</button>
+
+<!-- Modal HTML -->
+<div id="videoModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <iframe id="youtubeVideo" width="560" height="315" src="https://www.youtube.com/embed/VIDEO_ID?enablejsapi=1" frameborder="0" allowfullscreen></iframe>
+  </div>
+</div>
+
+<script>
+  // Variables
+  var modal = document.getElementById("videoModal");
+  var youtubePlayer;
+
+  // Function to open the modal and start the video
+  function openModal() {
+    modal.style.display = "block";
+    if (!youtubePlayer) {
+      youtubePlayer = new YT.Player("youtubeVideo");
+    }
+    youtubePlayer.playVideo();
+  }
+
+  // Function to close the modal and pause the video
+  function closeModal() {
+    modal.style.display = "none";
+    if (youtubePlayer) {
+      youtubePlayer.pauseVideo();
+    }
+  }
+
+  // Initialize the YouTube API
+  var tag = document.createElement("script");
+  tag.src = "https://www.youtube.com/iframe_api";
+  var firstScriptTag = document.getElementsByTagName("script")[0];
+  firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+  // Function to handle when the API is ready
+  function onYouTubeIframeAPIReady() {
+    // You can leave this empty if you want, or perform additional setup here
+  }
+</script>
+
+</body>
+</html>
+
