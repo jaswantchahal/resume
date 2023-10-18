@@ -1,32 +1,46 @@
- .mySlider {
-            background: #554ea0;
-            width: 100%;
-            height: 29px;
-            outline: none;
-            border: 14px solid #fff;
-            border-radius: 50px;
+ /* Styles for the slider thumb */
+         .mySlider::-webkit-slider-thumb {
             -webkit-appearance: none;
-            -moz-appearance: none;
             appearance: none;
-            position: relative;
-            z-index: 1;
-            transition: all .3s ease;
-        }
-
-        input[type="range"]::-webkit-slider-thumb {
-            background: #363b41;
-            width: 25px;
-            height: 25px;
-            border-radius: 5px;
+            width: 20px;
+            height: 20px;
+            background: #4CAF50;
             cursor: pointer;
-            transition: all .15s ease-in-out 0;
+            border-radius: 50%;
+        }
+
+        .mySlider::-moz-range-thumb {
+            width: 20px;
+            height: 20px;
+            background: #4CAF50;
+            cursor: pointer;
+            border-radius: 50%;
+        }
+
+        /* Styles for the slider track */
+        .mySlider {
             -webkit-appearance: none;
-            appearance: none
+            width: 100%;
+            height: 15px;
+            border-radius: 5px;
+            background: #d3d3d3;
+            outline: none;
         }
 
-        input[type="range"]:active::-webkit-slider-thumb {
-            box-shadow: 0 0 0 5px #fff inset, 0 0 5px #363b41
+        .mySlider:hover {
+            background: #888;
         }
 
+        .mySlider::-webkit-slider-thumb:hover {
+            background: #4CAF50;
+        }
 
+        .mySlider::-moz-range-thumb:hover {
+            background: #4CAF50;
+        }
+
+        /* Styles for the slider value */
+        .sliderValue {
+            margin-top: 10px;
+        }
     <input type="range" class="mySlider" id="customRange1">
