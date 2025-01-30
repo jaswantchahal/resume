@@ -1,0 +1,92 @@
+.profile_top {
+  background: rgba(43, 49, 62, 0.85);
+  padding: 16px;
+  border-radius: 0 0 20px 20px;
+  position: relative;
+  overflow: hidden;
+  &::before {
+    content: "";
+    width: 200px;
+    height: 200px;
+    background-image: url("../../../public/images/profile-top-blur.svg");
+    background-repeat: no-repeat;
+    background-position: left top;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  &::after {
+    content: "";
+    width: 200px;
+    height: 250px;
+    background-image: url("../../../public/images/profile-bottom-blur.svg");
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    position: absolute;
+    bottom: -20px;
+    right: 0;
+  }
+  .profile-meta {
+    display: flex;
+    align-items: center;
+    .img_area {
+      padding-right: 24px;
+      img {
+        width: 100%;
+        max-width: 100px;
+        height: 100px;
+        object-fit: cover;
+        border-radius: 50%;
+      }
+    }
+  }
+  .edit_profile-btn {
+    display: inline-block;
+    border-radius: 15px;
+    .primary_btn {
+      height: auto;
+      padding: 6px 10px;
+      border-radius: 15px;
+      font-weight: 400;
+    }
+  }
+  .profile_details {
+    flex: 1;
+  }
+  .ant-btn-icon {
+    padding-right: 10px;
+  }
+}
+
+.profile-links {
+  padding: 20px 16px;
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    li {
+      margin-bottom: 12px;
+      border-radius: 12px;
+      background: linear-gradient(
+        111.27deg,
+        rgba(100, 100, 100, 1) 9.26%,
+        rgba(17, 18, 30, 0) 37%,
+        rgba(17, 81, 30, 0) 50%,
+        rgba(130, 145, 177, 0.32) 85%
+      );
+      border: 1px solid transparent;
+      a {
+        text-decoration: none;
+        border-radius: 12px;
+        height: 54px;
+        display: flex;
+        align-items: center;
+        background: #0e1613;
+        padding: 0 15px;
+        color: #fff;
+        font-size: 14px;
+        font-weight: 500;
+      }
+    }
+  }
+}

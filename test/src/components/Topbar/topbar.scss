@@ -1,0 +1,42 @@
+.topbar {
+  padding: 10px 16px 16px;
+  justify-content: space-between;
+  align-items: center;
+  .logo_side {
+    img {
+      width: 96px;
+    }
+  }
+  button {
+    display: flex;
+    background-color: #4f535a;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 8px;
+    height: 30px;
+    position: relative;
+    border: 0;
+    .count {
+        padding:0px 30px  0px 2px;
+        img{
+            margin-right: 6px;
+        }
+        span{
+            font-size: 12px;
+        }
+
+    }
+    span.plus {
+      height: 100%;
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 26px;
+      display: flex;
+      align-items: center;
+      border-radius: 0px 8px 6px 0px;
+      justify-content: center;
+      background-color: var(--primary-color);
+    }
+  }
+}

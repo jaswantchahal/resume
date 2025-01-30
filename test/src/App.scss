@@ -1,0 +1,455 @@
+:root {
+  --primary-color: #42d63a;
+  --yellow-color: rgba(253, 187, 4, 1);
+  --grey-bg-color: rgba(43, 49, 62, 0.85);
+  --darkgrey-bg-color: rgba(43, 49, 62, 0.8);
+  --darkgrey2-bg-color: #0e1613;
+  --black-color: #000;
+  --primary-btn-bg: linear-gradient(90deg, #42d63a 0%, #31b729 100%);
+}
+.ant-typography {
+  font-family: "Poppins", serif;
+}
+
+body {
+  font-family: "Poppins", serif !important;
+  color: #fff;
+}
+h1 {
+  font-size: 40px;
+}
+h2 {
+  font-size: 32px;
+}
+h3 {
+  font-size: 28px;
+}
+h4 {
+  font-size: 24px;
+}
+h5 {
+  font-size: 20px;
+}
+h5 {
+  font-size: 16px;
+}
+p {
+  font-size: 16px;
+}
+:where(
+    .css-dev-only-do-not-override-nqoqt9
+  ).ant-input-outlined.ant-input-status-error:not(.ant-input-disabled) {
+  background: transparent;
+  &:hover,
+  &:focus {
+    background: transparent;
+  }
+}
+.ant-typography {
+  color: #fff;
+}
+.ant-input {
+  height: 46px;
+  color: #fff !important;
+  background: #2b313eb2 !important;
+  border-color: #bcbcbc !important;
+
+  &::placeholder {
+    color: rgba($color: #fff, $alpha: 0.5) !important;
+  }
+  &:hover,
+  &:focus {
+    background: #2b313eb2 !important;
+  }
+}
+.ant-form-item-explain-error {
+  font-size: 12px;
+}
+.ant-form {
+  color: #fff;
+}
+.ant-btn {
+  height: 48px;
+  font-weight: 500;
+  &.ant-btn-primary {
+    background: linear-gradient(90deg, #42d63a 0%, #31b729 100%);
+    color: #000000;
+    &:hover,
+    &:focus {
+      background: linear-gradient(90deg, #31b729 0%, #258d20 100%) !important;
+      color: #000000 !important;
+    }
+  }
+}
+
+.common_top {
+  display: flex;
+  align-items: center;
+  p {
+    font-weight: 600;
+    text-transform: capitalize;
+    font-size: 24px;
+    padding-right: 26px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.ant-modal-root .ant-modal-mask,
+.ant-modal-root .ant-modal-wrap {
+  max-width: 500px;
+  margin: 0 auto;
+}
+:where(.css-dev-only-do-not-override-nqoqt9).ant-input-outlined {
+  background: #2b313eb2 !important;
+  &:hover,
+  &:focus {
+    background: #2b313eb2 !important;
+  }
+  .ant-input {
+    height: 36px;
+    background: none !important;
+  }
+  .ant-input-suffix {
+    span {
+      color: #fff !important;
+    }
+  }
+}
+:where(.css-dev-only-do-not-override-nqoqt9).ant-select .ant-select-arrow {
+  color: #fff;
+}
+
+.dobPicker {
+  input {
+    &::placeholder {
+      color: rgba($color: #fff, $alpha: 0.5) !important;
+    }
+  }
+}
+
+.ant-picker-disabled input,
+.ant-input-disabled {
+  color: rgba($color: #fff, $alpha: 0.6) !important;
+}
+
+.app-layout {
+  max-width: 500px;
+  width: 100%;
+  margin: 0 auto;
+  background: #020a00;
+  height: 100vh;
+}
+
+.loading-screen {
+  height: 100%;
+  background: linear-gradient(
+    162.49deg,
+    rgba(24, 209, 14, 0.6) 9.06%,
+    rgba(2, 10, 0, 0.6) 72.04%
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  position: relative;
+  .logo {
+    padding-bottom: 80px;
+  }
+  .splash-msg {
+    position: absolute;
+    bottom: 22px;
+    left: 16px;
+    text-align: center;
+    img {
+      max-width: calc(100% - 32px);
+      width: 100%;
+    }
+  }
+}
+
+.welcome-screen {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  .imgArea {
+    padding: 0 16px;
+    text-align: center;
+    img {
+      max-width: 340px;
+      width: 100%;
+    }
+  }
+  .bottom-area {
+    padding: 0 0 5vh;
+    h2 {
+      font-size: 4vh;
+      max-width: 75%;
+      width: 100%;
+      margin: 0 auto;
+      padding-bottom: 10px;
+    }
+    p {
+      font-size: 16px;
+      margin: 0;
+      color: rgba($color: #fff, $alpha: 0.6);
+    }
+    .btns_area {
+      padding: 7vh 20px 0;
+      button {
+        width: 100%;
+        height: 48px;
+        background: linear-gradient(90deg, #42d63a 0%, #31b729 100%);
+        color: #000000;
+        font-weight: 500;
+        border-radius: 8px;
+        border: none;
+        &:hover {
+          background: linear-gradient(90deg, #31b729 0%, #258d20 100%);
+          color: #000000;
+        }
+      }
+    }
+    .nav {
+      display: flex;
+      justify-content: center;
+      padding: 35px 0;
+      span {
+        display: inline-block;
+        width: 30px;
+        height: 5px;
+        border-radius: 6px;
+        background: #2b313e;
+        margin: 0 6px;
+        &.active {
+          background: #42d63a;
+        }
+      }
+    }
+  }
+}
+
+.backBtn {
+  height: 70px;
+  padding: 12px 16px 12px;
+  position: sticky;
+  top: 0;
+  margin: 0 -16px;
+  background: #020a00;
+  button {
+    padding: 0;
+  }
+}
+
+.otp-screen {
+  .ant-form-item-control-input .ant-input-prefix {
+    display: none;
+  }
+  .mobile_field {
+    .ant-input-affix-wrapper {
+      background: #2b313eb2 !important;
+    }
+    .ant-select-selection-item {
+      display: flex;
+      align-items: center;
+      color: #fff;
+    }
+    .ant-input-wrapper,
+    .ant-select-selection-search {
+      color: #fff !important;
+    }
+    .ant-input-group-addon {
+      background: #2b313eb2;
+    }
+    .ant-input {
+      height: 36px;
+    }
+  }
+  .ant-select-arrow {
+    display: none;
+  }
+}
+.profilePicUploader {
+  span,
+  .ant-upload {
+    display: block;
+  }
+}
+
+.splash-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1000;
+  background-color: #fff; /* Optional, can match your splash background */
+  transition: transform 1s ease-in-out; /* Animation duration */
+}
+
+.splash-container.animate-out {
+  transform: translateY(-100%); /* Move splash out of view (top) */
+}
+
+.welcome-screen {
+  position: relative;
+  z-index: 1;
+}
+
+.splash-container {
+  position: fixed;
+  top: 0;
+  background: #020a00;
+  transition: transform 1s ease-in-out;
+  z-index: 1000;
+  max-width: 500px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.splash-container.animate {
+  transform: translateY(-100%); /* Move splash out of view (top) */
+}
+
+.primary_btn_bg {
+  border-radius: 6px;
+  padding-bottom: 1px;
+  margin: 0 auto;
+  background: linear-gradient(180deg, #0bd200 0%, #ebff03 100%);
+  .primary_btn {
+    width: 100%;
+    background: var(--primary-btn-bg) !important;
+    color: var(--black-color) !important;
+    font-weight: bold;
+    font-size: 16px;
+    padding: 10px 20px;
+    border-radius: 6px;
+    border: none;
+    display: block;
+    margin: 0 auto;
+  }
+}
+
+.signup {
+  height: 100%;
+}
+
+.account_successs {
+  height: 100%;
+  background: linear-gradient(
+    162.49deg,
+    rgba(24, 209, 14, 0.6) 9.06%,
+    rgba(2, 10, 0, 0.6) 72.04%
+  );
+  margin: 0 -16px;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.edit_profile {
+  .profile_img {
+    text-align: center;
+    position: relative;
+    padding: 60px 0;
+    img {
+      width: 160px;
+      height: 160px;
+      object-fit: cover;
+      object-position: center;
+      border-radius: 50%;
+    }
+  }
+}
+
+.editProfile-pic-btn {
+  position: absolute;
+  bottom: 10px;
+  right: -5px;
+}
+
+.modal_bg {
+  background: linear-gradient(
+    111.27deg,
+    #646464 9.26%,
+    rgba(38, 40, 67, 0) 37%,
+    rgba(17, 18, 30, 0) 50.62%,
+    rgba(130, 145, 177, 0.32) 85.15%
+  );
+  border-radius: 12px;
+  padding: 1px;
+  .modal_bg_inner {
+    padding: 24px 15px;
+    //   color: #fff;
+    background-color: rgba(43, 49, 62, 1);
+    position: relative;
+    border-radius: 12px;
+    div{
+      position: relative;
+      z-index: 2;
+    }
+    &::after {
+      content: "";
+      background-image: url("./../public/images/newimg/modalshadow.svg");
+      border-radius: 12px;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      z-index: 0;
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 100%;
+      width: 100%;
+    }
+  }
+}
+.confirmbankdetail {
+  input {
+    transition: all 0.4 s;
+    border-color: transparent !important;
+    &:focus,
+    &:focus-visible {
+      border-color: rgba(188, 188, 188, 1) !important;
+    }
+  }
+}
+
+.grey_gradint_bg {
+  .ant-modal-content {
+    padding: 0;
+    background-color: transparent;
+  }
+}
+.grey_gradint_bg {
+  background: linear-gradient(
+    111.27deg,
+    #646464 9.26%,
+    rgba(38, 40, 67, 0) 37%,
+    rgba(17, 18, 30, 0) 50.62%,
+    rgba(130, 145, 177, 0.32) 85.15%
+  );
+  border-radius: 12px;
+  padding: 1px;
+}
+.ant-modal-mask {
+  max-width: 500px;
+  margin: 0 auto;
+}
+.mb-0 {
+  margin-bottom: 0;
+}
+.text-center {
+  text-align: center;
+}
+.text-right {
+  text-align: right;
+}
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+.text-left {
+  text-align: left;
+}

@@ -1,0 +1,28 @@
+.ant-picker.ant-picker-outlined {
+  background-color: rgba(64, 68, 77, 1);
+  color: #fff;
+  border: none;
+  padding: 10px 18px;
+  .ant-picker-input {
+    input{
+        font-size: 14px;
+        &::placeholder{
+            color: #fff;
+        }
+    }
+    span {
+      svg {
+        fill: #fff;
+      }
+    }
+  }
+}
+
+
+.detail_box{
+  padding: 8px;
+  border-radius: 6px;
+border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+margin-bottom: 8px;
+background-color: rgba(255, 255, 255, 0.1);
+}

@@ -1,0 +1,17 @@
+.invitesteps {
+  position: relative;
+  &::after {
+    content: "";
+    background-image: url("/../public/images/newimg/modalshadow.svg");
+    border-radius: 12px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+  }
+}

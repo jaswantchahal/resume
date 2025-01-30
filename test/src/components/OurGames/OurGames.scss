@@ -1,0 +1,17 @@
+.game_card{
+    border-radius: 12px;
+    overflow: hidden;
+    .overlay{
+        display: flex;
+        align-items: center;
+        justify-content: end;
+        flex-direction: column;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 70%;
+        background: linear-gradient(180deg, rgba(18, 141, 255, 0) 7.9%, rgba(18, 141, 255, 0.8) 59.4%, #128DFF 100%);
+        padding: 10px;
+    }
+}

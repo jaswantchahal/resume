@@ -1,0 +1,10 @@
+.total_balance {
+    padding: 32px;
+    border-radius: 12px;
+    background-color: var(--grey-bg-color);
+    .balance {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }

@@ -1,0 +1,55 @@
+.fixed-bar {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  background: #2b313e;
+  ul {
+    display: flex;
+    list-style: none;
+    padding: 8px 25px;
+    margin: 0;
+    li {
+      flex: 1;
+      a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 42px;
+        text-decoration: none;
+        padding: 0 20px;
+        color: #000;
+        span {
+          &.text {
+            display: none;
+            padding-left: 10px;
+            font-size: 12px;
+            font-weight: 500;
+          }
+        }
+        &.active {
+          border-radius: 8px;
+          background: #42d63a;
+          span {
+            &.text {
+              display: block;
+            }
+          }
+        }
+      }
+    }
+    .profile-initials{
+        width: 28px;
+        height: 28px;
+        font-size: 12px;
+        font-weight: 600;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        background: #CFAB51;
+    }
+  }
+}

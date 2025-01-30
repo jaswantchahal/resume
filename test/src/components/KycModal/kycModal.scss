@@ -1,0 +1,85 @@
+.kyc_bar {
+  margin: 0 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 8px 10px;
+  border-radius: 6px;
+  background-color: rgba(240, 67, 73, 0.3);
+  border: 1px solid rgba(240, 67, 73, 0.5);
+  p {
+    font-size: 12px;
+    margin-bottom: 0;
+  }
+  button {
+    box-shadow: none;
+    border: none;
+    font-size: 12px;
+    background-color: transparent !important;
+    color: rgba(240, 67, 73, 1) !important;
+    height: auto;
+    &:active,
+    &:focus-visible,
+    &:focus {
+      background: none;
+      border: 0;
+      outline: none;
+      box-shadow: non;
+    }
+  }
+}
+
+.kyc_modal {
+  .ant-modal-content {
+    background: none;
+  }
+  .ant-modal-body {
+    border-radius: 12px;
+    padding: 30px 15px;
+    background: #2a2a3e;
+    color: #fff;
+  }
+
+  .kyc_content {
+    text-align: center;
+
+    .kyc_icon {
+      margin-bottom: 15px;
+
+      img {
+        width: 60px;
+        height: 60px;
+      }
+    }
+
+    .kyc_title {
+      font-size: 22px;
+      font-weight: 600;
+      color: white;
+      margin-bottom: 8px;
+    }
+
+    .kyc_description {
+      font-size: 14px;
+      line-height: 1.5;
+      color: #fff;
+      margin-bottom: 20px;
+
+      strong {
+        color: #fff;
+        font-weight: 600;
+      }
+    }
+
+    .kyc_skip {
+      border: 0;
+      background-color: transparent !important;
+      display: block;
+      margin: 15px auto 0;
+      font-size: 16px;
+      text-decoration: none;
+      color: #fff;
+    }
+  }
+}
